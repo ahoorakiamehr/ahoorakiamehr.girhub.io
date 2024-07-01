@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
@@ -11,11 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="welcome">
-        <img class="logo" width="100" height="100" src="assets/img/ahoora.jpg">
-        <h1> به وبسایت اهورا کیامهر خوش آمدید! </h1>
+<body class="preload">
+    <div id="loader" class="loader">
+        <img src="assets/img/ahoora.jpg" alt="اهورا کیامهر" class="loader-logo">
+        <p class="loader-text">در حال بارگذاری<span id="dots"></span></p>
     </div>
+    <div class="theme-toggle">
+        <button id="themeButton" onclick="toggleTheme()">🌜</button>
+    </div>
+    <div class="welcome">
+        <img class="logo" width="100" height="100" src="assets/img/ahoora.jpg" alt="اهورا کیامهر">
+        <h1>به وبسایت اهورا کیامهر خوش آمدید! 👋</h1>
+        <p>سلام! من اهورا کیامهر هستم. تازه وارد دنیای برنامه‌نویسی شده‌ام و با اشتیاق فراوان قصد دارم تحولی بزرگ در این صنعت ایجاد کنم. ایده‌های زیادی در سر دارم و می‌خواهم آنها را به واقعیت تبدیل کنم.</p>
+        <div class="social-links">
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">🐦</a>
+            <a href="https://instagram.com/ahoora_kiamehr87" target="_blank" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">🔗</a>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -1,48 +1,125 @@
-body{
-    background-color: #2a2929;
-    color: #f6f6f6;
-    font-family: "Vazirmatn", sans-serif;
-    direction: rtl;
+body {
+  background-color: #2a2929;
+  color: #f6f6f6;
+  font-family: "Vazirmatn", sans-serif;
+  direction: rtl;
+  transition: background-color 0.5s, color 0.5s;
 }
-.welcome{
-    text-align: center;
-    margin: auto;
-}
-.welcome h1{
-    margin-top: 30px;
-}
-.logo{
-    margin-top: 50px;
-    border-radius: 50%;
-    border: 3PX #f6f6f6 solid;
-}
-.logo:hover {
-     animation: shake 0.5s;
-     animation-iteration-count: infinite;
-  }
-  
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
 
-  @media screen and (min-width: 601px) {
-    h1 {
+body.light-mode {
+  background-color: #f6f6f6;
+  color: #2a2929;
+}
+
+body.preload {
+  overflow: hidden;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2929;
+  color: #f6f6f6;
+  z-index: 9999;
+}
+
+.loader-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px #f6f6f6 solid;
+  margin-bottom: 20px;
+}
+
+.loader-text {
+  font-size: 20px;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+.welcome {
+  text-align: center;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.welcome h1 {
+  margin-top: 30px;
+}
+
+.welcome p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.logo {
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 3px #f6f6f6 solid;
+}
+
+.logo:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #f6f6f6;
+  font-size: 24px;
+}
+
+.social-links a:hover {
+  color: #ffcc00;
+}
+
+@media screen and (min-width: 601px) {
+  h1 {
       font-size: 28px;
-    }
   }
-  
-  @media screen and (max-width: 600px) {
-    h1 {
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
       font-size: 18px;
-    }
   }
+}
